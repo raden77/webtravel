@@ -3,10 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layanan - TravelKu</title>
+    <title>Layanan Travel Antarkota - TravelKu</title>
+    <meta name="description" content="Travel Palembang ke Jakarta, Jambi, Lampung. Layanan cepat, nyaman, bersih dengan harga terjangkau.">
+    <meta name="keywords" content="travel palembang jakarta, travel palembang jambi, travel palembang lampung, travel antarkota, travel murah">
+    
+    <!-- Structured Data for Travel Services -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Layanan Travel Antarkota TravelKu",
+      "description": "Travel dari Palembang ke berbagai kota dengan layanan cepat, nyaman, dan bersih",
+      "itemListElement": [
+        {
+          "@type": "TouristAttraction",
+          "name": "Travel Palembang - Jakarta",
+          "description": "Travel cepat, nyaman, dan bersih dari Palembang ke Jakarta",
+          "offers": {
+            "@type": "Offer",
+            "price": "600000",
+            "priceCurrency": "IDR"
+          }
+        },
+        {
+          "@type": "TouristAttraction",
+          "name": "Travel Palembang - Jambi",
+          "description": "Travel cepat, nyaman, dan bersih dari Palembang ke Jambi",
+          "offers": {
+            "@type": "Offer",
+            "price": "200000",
+            "priceCurrency": "IDR"
+          }
+        },
+        {
+          "@type": "TouristAttraction",
+          "name": "Travel Palembang - Lampung",
+          "description": "Travel cepat, nyaman, dan bersih dari Palembang ke Lampung",
+          "offers": {
+            "@type": "Offer",
+            "price": "250000",
+            "priceCurrency": "IDR"
+          }
+        }
+      ]
+    }
+    </script>
+    
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav>
         <div class="logo">🌴 Dirgantara Travelindo</div>
         <ul class="nav-links">
@@ -16,41 +63,433 @@
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="about.html" class="active">Tentang Kami</a></li>
             <li><a href="contact.html">Kontak</a></li>
-            <li><a href="booking.html" class="booking-btn">Booking</a></li>
+            <!-- <li><a href="booking.html" class="booking-btn">Booking</a></li> -->
         </ul>
         <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
+           
         </div>
     </nav>
-    <section class="service-hero">
+
+    <!-- Services Hero -->
+    <section class="services-hero">
         <div class="container">
-            <h1>Layanan Kami</h1>
-            <p class="subtitle">Kami siap membantu Anda merencanakan perjalanan impian</p>
+            <h1>Layanan Travel Antarkota</h1>
+            <p class="subtitle">Travel cepat, nyaman, dan bersih dari Palembang ke berbagai kota</p>
         </div>
     </section>
-    <section class="services">
-        <h2>Paket Perjalanan Kami</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <h3>✈️ Paket Bali</h3>
-                <p>5 Hari 4 Malam</p>
-                <p>Rp 3.500.000/orang</p>
-            </div>
-            <div class="service-card">
-                <h3>🏝️ Paket Lombok</h3>
-                <p>4 Hari 3 Malam</p>
-                <p>Rp 2.800.000/orang</p>
-            </div>
-            <div class="service-card">
-                <h3>🗻 Paket Jepang</h3>
-                <p>7 Hari 6 Malam</p>
-                <p>Rp 15.000.000/orang</p>
+
+    <!-- Services Grid -->
+    <section class="services-grid-section">
+        <div class="container">
+            <div class="services-grid">
+                <!-- Service 1: Palembang - Jakarta -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <h2>Travel Palembang - Jakarta</h2>
+                        <div class="service-features">
+                            <span class="feature-tag">
+                                <i class="fas fa-bolt"></i> Cepat
+                            </span>
+                            <span class="feature-tag">
+                                <i class="fas fa-couch"></i> Nyaman
+                            </span>
+                            <span class="feature-tag">
+                                <i class="fas fa-broom"></i> Bersih
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-schedule">
+                        <h3><i class="fas fa-clock"></i> Jadwal Jemput</h3>
+                        <div class="schedule-list">
+                            <div class="schedule-item">
+                                <div class="schedule-time">Jam 09:00</div>
+                                <div class="schedule-label">Jadwal Pagi (mulai penjemputan)</div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">Jam 19:00</div>
+                                <div class="schedule-label">Jadwal Malam (mulai penjemputan)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <div class="price-label">Mulai dari</div>
+                            <div class="price-amount">Rp 600.000</div>
+                        </div>
+                        <button class="book-btn" onclick="bookService('Palembang - Jakarta', 600000)">
+                            Booking Sekarang
+                        </button>
+                    </div>
+                    
+                    <div class="service-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-text">4.5/5 (128 review)</span>
+                    </div>
+                </div>
+
+                <!-- Service 2: Palembang - Jambi -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <h2>Travel Palembang - Jambi</h2>
+                        <div class="service-features">
+                            <span class="feature-tag">
+                                <i class="fas fa-bolt"></i> Cepat
+                            </span>
+                            <span class="feature-tag">
+                                <i class="fas fa-couch"></i> Nyaman
+                            </span>
+                            <span class="feature-tag">
+                                <i class="fas fa-broom"></i> Bersih
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-schedule">
+                        <h3><i class="fas fa-clock"></i> Jadwal Jemput</h3>
+                        <div class="schedule-list">
+                            <div class="schedule-item">
+                                <div class="schedule-time">Jam 09:00</div>
+                                <div class="schedule-label">Jadwal Pagi (mulai penjemputan)</div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">Jam 19:00</div>
+                                <div class="schedule-label">Jadwal Malam (mulai penjemputan)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <div class="price-label">Mulai dari</div>
+                            <div class="price-amount">Rp 200.000</div>
+                        </div>
+                        <button class="book-btn" onclick="bookService('Palembang - Jambi', 200000)">
+                            Booking Sekarang
+                        </button>
+                    </div>
+                    
+                    <div class="service-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="rating-text">4.0/5 (96 review)</span>
+                    </div>
+                </div>
+
+                <!-- Service 3: Palembang - Lampung -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <h2>Travel Palembang - Lampung</h2>
+                        <div class="service-features">
+                            <span class="feature-tag">
+                                <i class="fas fa-bolt"></i> Cepat
+                            </span>
+                            <span class="feature-tag">
+                                <i class="fas fa-couch"></i> Nyaman
+                            </span>
+                            <span class="feature-tag">
+                                <i class="fas fa-broom"></i> Bersih
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-schedule">
+                        <h3><i class="fas fa-clock"></i> Jadwal Jemput</h3>
+                        <div class="schedule-list">
+                            <div class="schedule-item">
+                                <div class="schedule-time">Jam 09:00</div>
+                                <div class="schedule-label">Jadwal Pagi (mulai penjemputan)</div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">Jam 19:00</div>
+                                <div class="schedule-label">Jadwal Malam (mulai penjemputan)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <div class="price-label">Mulai dari</div>
+                            <div class="price-amount">Rp 250.000</div>
+                        </div>
+                        <button class="book-btn" onclick="bookService('Palembang - Lampung', 250000)">
+                            Booking Sekarang
+                        </button>
+                    </div>
+                    
+                    <div class="service-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-text">5.0/5 (154 review)</span>
+                    </div>
+                </div>
+
+                <!-- Service 4: Palembang - Bandung (Tambahan) -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <h2>Travel Palembang - Bandung</h2>
+                        <div class="service-features">
+                            <span class="feature-tag">
+                                <i class="fas fa-bolt"></i> Cepat
+                            </span>
+                            <span class="feature-tag">
+                                <i class="fas fa-couch"></i> Nyaman
+                            </span>
+                            <span class="feature-tag">
+                                <i class="fas fa-broom"></i> Bersih
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-schedule">
+                        <h3><i class="fas fa-clock"></i> Jadwal Jemput</h3>
+                        <div class="schedule-list">
+                            <div class="schedule-item">
+                                <div class="schedule-time">Jam 08:00</div>
+                                <div class="schedule-label">Jadwal Pagi (mulai penjemputan)</div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">Jam 20:00</div>
+                                <div class="schedule-label">Jadwal Malam (mulai penjemputan)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <div class="price-label">Mulai dari</div>
+                            <div class="price-amount">Rp 550.000</div>
+                        </div>
+                        <button class="book-btn" onclick="bookService('Palembang - Bandung', 550000)">
+                            Booking Sekarang
+                        </button>
+                    </div>
+                    
+                    <div class="service-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-text">4.5/5 (87 review)</span>
+                    </div>
+                </div>
+
+                <!-- Service 5: Palembang - Medan (Tambahan) -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <h2>Travel Palembang - Medan</h2>
+                        <div class="service-features">
+                            <span class="feature-tag">
+                                <i class="fas fa-bolt"></i> Cepat
+                            </span>
+                            <span class="feature-tag">
+                                <i class="fas fa-couch"></i> Nyaman
+                            </span>
+                            <span class="feature-tag">
+                                <i class="fas fa-broom"></i> Bersih
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-schedule">
+                        <h3><i class="fas fa-clock"></i> Jadwal Jemput</h3>
+                        <div class="schedule-list">
+                            <div class="schedule-item">
+                                <div class="schedule-time">Jam 10:00</div>
+                                <div class="schedule-label">Jadwal Pagi (mulai penjemputan)</div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">Jam 22:00</div>
+                                <div class="schedule-label">Jadwal Malam (mulai penjemputan)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <div class="price-label">Mulai dari</div>
+                            <div class="price-amount">Rp 750.000</div>
+                        </div>
+                        <button class="book-btn" onclick="bookService('Palembang - Medan', 750000)">
+                            Booking Sekarang
+                        </button>
+                    </div>
+                    
+                    <div class="service-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="rating-text">4.0/5 (63 review)</span>
+                    </div>
+                </div>
+
+                <!-- Service 6: Palembang - Padang (Tambahan) -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <h2>Travel Palembang - Padang</h2>
+                        <div class="service-features">
+                            <span class="feature-tag">
+                                <i class="fas fa-bolt"></i> Cepat
+                            </span>
+                            <span class="feature-tag">
+                                <i class="fas fa-couch"></i> Nyaman
+                            </span>
+                            <span class="feature-tag">
+                                <i class="fas fa-broom"></i> Bersih
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-schedule">
+                        <h3><i class="fas fa-clock"></i> Jadwal Jemput</h3>
+                        <div class="schedule-list">
+                            <div class="schedule-item">
+                                <div class="schedule-time">Jam 07:00</div>
+                                <div class="schedule-label">Jadwal Pagi (mulai penjemputan)</div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">Jam 17:00</div>
+                                <div class="schedule-label">Jadwal Sore (mulai penjemputan)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <div class="price-label">Mulai dari</div>
+                            <div class="price-amount">Rp 300.000</div>
+                        </div>
+                        <button class="book-btn" onclick="bookService('Palembang - Padang', 300000)">
+                            Booking Sekarang
+                        </button>
+                    </div>
+                    
+                    <div class="service-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-text">4.5/5 (72 review)</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mengapa Memilih TravelKu?</h2>
+                <p>Layanan terbaik untuk perjalanan Anda</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Terpercaya</h3>
+                    <p>Sudah melayani ribuan pelanggan dengan rating 4.8/5</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Armada Terawat</h3>
+                    <p>Mobil selalu dalam kondisi prima dan bersih</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Sopir Berpengalaman</h3>
+                    <p>Sopir profesional dengan pengalaman minimal 5 tahun</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Customer service siap membantu kapan saja</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section class="booking-cta">
+        <div class="container">
+            <h2>Siap untuk Perjalanan?</h2>
+            <p>Pilih rute yang sesuai dan booking sekarang juga!</p>
+            <a href="booking.html" class="cta-button">
+                <i class="fas fa-calendar-check"></i> Booking Sekarang
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 TravelKu. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>TravelKu</h4>
+                <p>Travel antarkota terpercaya sejak 2010 dengan pelayanan terbaik.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak Layanan</h4>
+                <p><i class="fab fa-whatsapp"></i> +62 812-3456-7890</p>
+                <p><i class="fas fa-phone"></i> +62 813-4567-8901</p>
+                <p><i class="fas fa-envelope"></i> info@travelku.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Jam Operasional</h4>
+                <p>Senin - Minggu: 06.00 - 22.00</p>
+                <p>Booking online 24 jam</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TravelKu. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/6281234567890?text=Halo%20TravelKu,%20saya%20ingin%20bertanya%20tentang%20layanan%20travel" 
+       class="whatsapp-float" target="_blank">
+       <i class="fab fa-whatsapp"></i>
+       <span>Tanya Jadwal</span>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="services.js"></script>
 </body>
 </html>

@@ -3,13 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelKu - Liburan Impian Anda</title>
+    <title>TravelKu - Travel Antarkota Terpercaya Palembang</title>
+    <meta name="description" content="TravelKu: Travel antarkota dari Palembang ke Jakarta, Jambi, Lampung dengan layanan cepat, nyaman, dan bersih. Booking sekarang!">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "TravelKu",
+      "description": "Travel antarkota terpercaya dari Palembang ke berbagai kota di Indonesia",
+      "url": "https://travelku.com",
+      "logo": "https://travelku.com/assets/images/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palembang",
+        "addressRegion": "Sumatera Selatan",
+        "addressCountry": "ID"
+      },
+      "openingHours": "Mo-Su 06:00-22:00",
+      "telephone": "+6281234567890",
+      "priceRange": "Rp 200.000 - Rp 750.000"
+    }
+    </script>
+    
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-index.css"> <!-- CSS khusus index -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
+    <!-- Navigation (tetap pakai style.css) -->
+   <nav>
         <div class="logo">🌴 Dirgantara Travelindo</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -18,25 +42,392 @@
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="about.html" class="active">Tentang Kami</a></li>
             <li><a href="contact.html">Kontak</a></li>
-            <li><a href="booking.html" class="booking-btn">Booking</a></li>
+            <!-- <li><a href="booking.html" class="booking-btn">Booking</a></li> -->
         </ul>
         <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
+           
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Jelajahi Dunia Bersama Kami</h1>
-        <p>Paket travel terbaik dengan harga terjangkau</p>
-        <a href="services.html" class="cta-button">Lihat Paket</a>
+    <!-- Hero Section dengan class khusus index -->
+    <section class="index-hero">
+        <div class="index-hero-content">
+            <h1>Travel Antarkota Terpercaya dari Palembang</h1>
+            <p class="tagline">Layanan travel cepat, nyaman, dan bersih ke berbagai kota dengan harga terjangkau</p>
+            <div class="index-hero-buttons">
+                <a href="#services" class="index-cta-button">
+                    <i class="fas fa-bus"></i> Lihat Layanan
+                </a>
+                <!-- <a href="booking.html" class="index-cta-button secondary">
+                    <i class="fas fa-calendar-check"></i> Booking Sekarang
+                </a> -->
+            </div>
+        </div>
+        <div class="index-hero-stats">
+            <div class="index-stat">
+                <div class="index-stat-number">14+</div>
+                <div class="index-stat-label">Tahun Pengalaman</div>
+            </div>
+            <div class="index-stat">
+                <div class="index-stat-number">50K+</div>
+                <div class="index-stat-label">Penumpang Dilayani</div>
+            </div>
+            <div class="index-stat">
+                <div class="index-stat-number">15+</div>
+                <div class="index-stat-label">Armada Terawat</div>
+            </div>
+            <div class="index-stat">
+                <div class="index-stat-number">6</div>
+                <div class="index-stat-label">Rute Tersedia</div>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Tentang Kami Section dengan class khusus -->
+    <section class="index-about-section" id="about">
+        <div class="container">
+            <div class="index-section-header">
+                <h2>Tentang Dirgantara Travelindo</h2>
+                <div class="index-underline"></div>
+                <p class="index-section-subtitle">Menghubungkan perjalanan Anda sejak 2010 dengan layanan terbaik</p>
+            </div>
+            
+            <div class="index-about-content">
+                <div class="index-about-text">
+                    <h3>Dirgantara Travelindo: Mitra Perjalanan Antarkota Terpercaya</h3>
+                    <p>Dirgantara Travelindo didirikan pada tahun 2010 dengan visi memberikan layanan travel antarkota yang aman, nyaman, dan terjangkau bagi masyarakat Palembang dan sekitarnya.</p>
+                    
+                    <div class="index-about-points">
+                        <div class="index-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Melayani ribuan penumpang setiap bulan</span>
+                        </div>
+                        <div class="index-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Armada terbaru dengan kondisi prima</span>
+                        </div>
+                        <div class="index-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Sopir berpengalaman dan profesional</span>
+                        </div>
+                        <div class="index-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Layanan 24/7 untuk pertanyaan dan bantuan</span>
+                        </div>
+                    </div>
+                    
+                    <p>Kami berkomitmen untuk terus memberikan pengalaman perjalanan terbaik dengan menjaga kualitas layanan, keamanan, dan kenyamanan penumpang sebagai prioritas utama.</p>
+                    
+                    <a href="about.html" class="index-learn-more-btn">
+                        <i class="fas fa-info-circle"></i> Pelajari Lebih Lanjut
+                    </a>
+                </div>
+                
+                <div class="index-about-image">
+                    <img src="assets/images/gallery/noimage.jpg" alt="Armada TravelKu" loading="lazy">
+                    <div class="index-image-overlay">
+                        <div class="index-overlay-content">
+                            <i class="fas fa-users"></i>
+                            <h4>Komitmen Kami</h4>
+                            <p>Selalu memberikan pelayanan terbaik untuk kenyamanan Anda</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan Kami Section dengan class khusus -->
+    <section class="index-services-section" id="services">
+        <div class="container">
+            <div class="index-section-header">
+                <h2>Layanan Kami</h2>
+                <div class="index-underline"></div>
+                <p class="index-section-subtitle">Pilih rute perjalanan yang sesuai dengan kebutuhan Anda</p>
+            </div>
+            
+            <div class="index-services-grid">
+                <!-- Service 1 -->
+                <div class="index-service-card">
+                    <div class="index-service-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3>Palembang - Jakarta</h3>
+                    <div class="index-service-features">
+                        <span><i class="fas fa-bolt"></i> Cepat</span>
+                        <span><i class="fas fa-couch"></i> Nyaman</span>
+                        <span><i class="fas fa-broom"></i> Bersih</span>
+                    </div>
+                    <div class="index-service-schedule">
+                        <h4>Jadwal Jemput:</h4>
+                        <p><i class="fas fa-sun"></i> Pagi: 09.00</p>
+                        <p><i class="fas fa-moon"></i> Malam: 19.00</p>
+                    </div>
+                    <div class="index-service-price">
+                        <span class="index-price">Rp 600.000</span>
+                        <span class="index-price-note">/penumpang</span>
+                    </div>
+                    <a href="#" class="index-service-book-btn" onclick="bookService('Palembang - Jakarta', 600000)">
+                        <i class="fas fa-calendar-alt"></i> Booking Sekarang
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="index-service-card">
+                    <div class="index-service-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Palembang - Jambi</h3>
+                    <div class="index-service-features">
+                        <span><i class="fas fa-bolt"></i> Cepat</span>
+                        <span><i class="fas fa-couch"></i> Nyaman</span>
+                        <span><i class="fas fa-broom"></i> Bersih</span>
+                    </div>
+                    <div class="index-service-schedule">
+                        <h4>Jadwal Jemput:</h4>
+                        <p><i class="fas fa-sun"></i> Pagi: 09.00</p>
+                        <p><i class="fas fa-moon"></i> Malam: 19.00</p>
+                    </div>
+                    <div class="index-service-price">
+                        <span class="index-price">Rp 200.000</span>
+                        <span class="index-price-note">/penumpang</span>
+                    </div>
+                    <a href="#" class="index-service-book-btn" onclick="bookService('Palembang - Jambi', 200000)">
+                        <i class="fas fa-calendar-alt"></i> Booking Sekarang
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="index-service-card">
+                    <div class="index-service-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Palembang - Lampung</h3>
+                    <div class="index-service-features">
+                        <span><i class="fas fa-bolt"></i> Cepat</span>
+                        <span><i class="fas fa-couch"></i> Nyaman</span>
+                        <span><i class="fas fa-broom"></i> Bersih</span>
+                    </div>
+                    <div class="index-service-schedule">
+                        <h4>Jadwal Jemput:</h4>
+                        <p><i class="fas fa-sun"></i> Pagi: 09.00</p>
+                        <p><i class="fas fa-moon"></i> Malam: 19.00</p>
+                    </div>
+                    <div class="index-service-price">
+                        <span class="index-price">Rp 250.000</span>
+                        <span class="index-price-note">/penumpang</span>
+                    </div>
+                    <a href="#" class="index-service-book-btn" onclick="bookService('Palembang - Lampung', 250000)">
+                        <i class="fas fa-calendar-alt"></i> Booking Sekarang
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="index-service-card featured">
+                    <div class="index-featured-badge">Populer</div>
+                    <div class="index-service-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <h3>Palembang - Bandung</h3>
+                    <div class="index-service-features">
+                        <span><i class="fas fa-bolt"></i> Cepat</span>
+                        <span><i class="fas fa-couch"></i> Nyaman</span>
+                        <span><i class="fas fa-broom"></i> Bersih</span>
+                    </div>
+                    <div class="index-service-schedule">
+                        <h4>Jadwal Jemput:</h4>
+                        <p><i class="fas fa-sun"></i> Pagi: 08.00</p>
+                        <p><i class="fas fa-moon"></i> Malam: 20.00</p>
+                    </div>
+                    <div class="index-service-price">
+                        <span class="index-price">Rp 550.000</span>
+                        <span class="index-price-note">/penumpang</span>
+                    </div>
+                    <a href="#" type="button" class="index-service-book-btn" onclick="bookService('Palembang - Bandung', 550000)">
+                        <i class="fas fa-calendar-alt"></i> Booking Sekarang
+                    </a>
+                </div>
+            </div>
+            
+            <div class="index-view-all-services">
+                <a href="services.html" class="index-view-all-btn">
+                    <i class="fas fa-list"></i> Lihat Semua Layanan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section dengan class khusus -->
+    <section class="index-why-choose-section">
+        <div class="container">
+            <div class="index-section-header">
+                <h2>Mengapa Memilih Dirgantara Travelindo ?</h2>
+                <div class="index-underline"></div>
+                <p class="index-section-subtitle">Keunggulan yang membuat perjalanan Anda lebih berkesan</p>
+            </div>
+            
+            <div class="index-reasons-grid">
+                <div class="index-reason-card">
+                    <div class="index-reason-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Terpercaya & Aman</h3>
+                    <p>Sudah berpengalaman 14+ tahun dengan ribuan penumpang puas. Keamanan dan kenyamanan Anda adalah prioritas utama kami.</p>
+                </div>
+                
+                <div class="index-reason-card">
+                    <div class="index-reason-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Armada Terawat</h3>
+                    <p>Mobil selalu dalam kondisi prima dengan perawatan berkala. AC dingin, kursi nyaman, dan interior bersih setiap perjalanan.</p>
+                </div>
+                
+                <div class="index-reason-card">
+                    <div class="index-reason-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Sopir Profesional</h3>
+                    <p>Sopir berpengalaman dengan SIM lengkap dan pengalaman minimal 5 tahun. Ramah, santun, dan mengutamakan keselamatan.</p>
+                </div>
+                
+                <div class="index-reason-card">
+                    <div class="index-reason-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Tepat Waktu</h3>
+                    <p>Keberangkatan sesuai jadwal yang ditentukan. Tidak ada penundaan tanpa alasan yang jelas.</p>
+                </div>
+                
+                <div class="index-reason-card">
+                    <div class="index-reason-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Layanan 24/7</h3>
+                    <p>Customer service siap membantu kapan saja via WhatsApp, telepon, atau email. Respon cepat untuk semua pertanyaan.</p>
+                </div>
+                
+                <div class="index-reason-card">
+                    <div class="index-reason-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>Harga Terjangkau</h3>
+                    <p>Harga kompetitif dengan kualitas terbaik. Tidak ada biaya tersembunyi. Transparan dalam penentuan harga.</p>
+                </div>
+            </div>
+            
+            <div class="index-testimonial-section">
+                <h3>Apa Kata Pelanggan Kami</h3>
+                <div class="index-testimonials">
+                    <div class="index-testimonial">
+                        <div class="index-testimonial-content">
+                            <p>"Perjalanan Palembang-Jakarta dengan TravelKu sangat nyaman. Armada bersih, sopir ramah, dan tepat waktu. Recommended!"</p>
+                        </div>
+                        <div class="index-testimonial-author">
+                            <div class="index-author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="index-author-info">
+                                <h4>Budi Santoso</h4>
+                                <span>Pelanggan Rutin</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="index-testimonial">
+                        <div class="index-testimonial-content">
+                            <p>"Sudah 3x pakai TravelKu ke Lampung. Pelayanan memuaskan, harga sesuai, dan yang penting aman sampai tujuan."</p>
+                        </div>
+                        <div class="index-testimonial-author">
+                            <div class="index-author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="index-author-info">
+                                <h4>Sari Dewi</h4>
+                                <span>Pelanggan Setia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking CTA Section dengan class khusus -->
+    <section class="index-booking-cta-section">
+        <div class="container">
+            <div class="index-cta-content">
+                <h2>Siap untuk Berangkat?</h2>
+                <p>Booking perjalanan Anda sekarang dan dapatkan pengalaman travel terbaik dengan Dirgantara Travelindo</p>
+                <div class="index-cta-buttons">
+                    <!-- <a href="booking.html" class="index-cta-button primary">
+                        <i class="fab fa-whatsapp"></i> Booking via WhatsApp
+                    </a> -->
+                    <a href="contact.html" class="index-cta-button secondary">
+                        <i class="fas fa-phone"></i> Hubungi Kami
+                    </a>
+                </div>
+                <div class="index-cta-features">
+                    <div class="index-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Konfirmasi Instan</span>
+                    </div>
+                    <div class="index-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Pembayaran Mudah</span>
+                    </div>
+                    <div class="index-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Dukungan 24/7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (tetap pakai style.css) -->
     <footer>
-        <p>&copy; 2024 TravelKu. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Dirgantara Travelindo</h4>
+                <p>Travel antarkota terpercaya dari Palembang dengan layanan cepat, nyaman, dan bersih sejak 2010.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Kontak Layanan</h4>
+                <p><i class="fab fa-whatsapp"></i> +62 812-3456-7890</p>
+                <p><i class="fas fa-phone"></i> +62 813-4567-8901</p>
+                <p><i class="fas fa-envelope"></i> info@travelku.com</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Mayor Ruslan, Palembang</p>
+                <p><i class="fas fa-phone"></i> +62 812-3456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@travelku.com</p>
+                <p><i class="fas fa-clock"></i> Buka: 06.00 - 22.00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TravelKu. All rights reserved. | <a href="privacy.html">Kebijakan Privasi</a> | <a href="terms.html">Syarat & Ketentuan</a></p>
+        </div>
     </footer>
 
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/6281234567890?text=Halo%20TravelKu,%20saya%20ingin%20bertanya%20tentang%20layanan%20travel" 
+       class="whatsapp-float" target="_blank">
+       <i class="fab fa-whatsapp"></i>
+       <span>Tanya Jadwal</span>
+    </a>
+
     <script src="script.js"></script>
+    <script src="index.js"></script>
+    <script src="services.js"></script>
 </body>
 </html>
