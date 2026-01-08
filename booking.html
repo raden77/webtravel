@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Paket Wisata - TravelKu</title>
+    <meta name="description" content="Booking paket wisata Bali, Lombok, Jepang dengan mudah. Dapatkan harga terbaik dan konfirmasi instan via WhatsApp.">
+    <meta name="keywords" content="booking wisata, reservasi travel, paket tour, pemesanan liburan">
+    
+    <!-- Structured Data for Booking Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Reservation",
+      "reservationFor": {
+        "@type": "TouristAttraction",
+        "name": "Paket Wisata TravelKu"
+      },
+      "underName": {
+        "@type": "Person",
+        "name": "Customer TravelKu"
+      },
+      "reservationStatus": "https://schema.org/ReservationPending",
+      "provider": {
+        "@type": "TravelAgency",
+        "name": "TravelKu"
+      },
+      "bookingAgent": {
+        "@type": "TravelAgency",
+        "name": "TravelKu"
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🌴 Dirgantara Travelindo</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Layanan</a></li>
+            <!-- <li><a href="articles.html">Artikel</a></li> -->
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="contact.html" class="active">Kontak</a></li>
+            <li><a href="booking.html" class="booking-btn">Booking</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Booking Hero -->
+    <section class="booking-hero">
+        <div class="container">
+            <h1>Booking Paket Wisata</h1>
+            <p class="subtitle">Isi form di bawah untuk melakukan pemesanan</p>
+            <div class="booking-steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Data Pemesan</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Detail Perjalanan</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">Konfirmasi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-form-section">
+        <div class="container">
+            <form id="bookingForm" class="booking-form">
+                <!-- Data Pemesan -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-user"></i> Data Pemesan</h2>
+                        <p>Informasi pribadi untuk kontak dan konfirmasi</p>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">
+                                <i class="fas fa-user-circle"></i> Nama Lengkap *
+                            </label>
+                            <input type="text" id="fullName" name="fullName" required 
+                                   placeholder="Masukkan nama lengkap sesuai KTP">
+                            <small class="form-hint">Contoh: Budi Santoso</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i> Email *
+                            </label>
+                            <input type="email" id="email" name="email" required 
+                                   placeholder="email@contoh.com">
+                            <small class="form-hint">Email aktif untuk konfirmasi</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="whatsapp">
+                                <i class="fab fa-whatsapp"></i> Nomor WhatsApp *
+                            </label>
+                            <input type="tel" id="whatsapp" name="whatsapp" required 
+                                   placeholder="0812-3456-7890">
+                            <small class="form-hint">Format: 08xx-xxxx-xxxx</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Detail Perjalanan -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-suitcase"></i> Detail Perjalanan</h2>
+                        <p>Pilih paket dan atur preferensi perjalanan Anda</p>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="package">
+                                <i class="fas fa-map-marked-alt"></i> Pilih Paket *
+                            </label>
+                            <select id="package" name="package" required>
+                                <option value="">-- Pilih Paket Wisata --</option>
+                                <option value="bali-5d4n">🏝️ Paket Bali (5 Hari 4 Malam) - Rp 3.500.000/orang</option>
+                                <option value="lombok-4d3n">🏖️ Paket Lombok (4 Hari 3 Malam) - Rp 2.800.000/orang</option>
+                                <option value="jepang-7d6n">🗻 Paket Jepang (7 Hari 6 Malam) - Rp 15.000.000/orang</option>
+                                <option value="singapore-4d3n">🏙️ Paket Singapore (4 Hari 3 Malam) - Rp 4.200.000/orang</option>
+                                <option value="thailand-5d4n">🐘 Paket Thailand (5 Hari 4 Malam) - Rp 3.800.000/orang</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="departureDate">
+                                    <i class="fas fa-calendar-alt"></i> Tanggal Keberangkatan *
+                                </label>
+                                <input type="text" id="departureDate" name="departureDate" required 
+                                       placeholder="Pilih tanggal" class="date-picker">
+                                <small class="form-hint">DD/MM/YYYY</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="duration">
+                                    <i class="fas fa-clock"></i> Durasi *
+                                </label>
+                                <select id="duration" name="duration" required>
+                                    <option value="3d2n">3 Hari 2 Malam</option>
+                                    <option value="4d3n" selected>4 Hari 3 Malam</option>
+                                    <option value="5d4n">5 Hari 4 Malam</option>
+                                    <option value="7d6n">7 Hari 6 Malam</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="peopleCount">
+                                    <i class="fas fa-users"></i> Jumlah Orang *
+                                </label>
+                                <div class="people-counter">
+                                    <button type="button" class="counter-btn minus" onclick="decrementPeople()">-</button>
+                                    <input type="number" id="peopleCount" name="peopleCount" 
+                                           value="1" min="1" max="20" readonly>
+                                    <button type="button" class="counter-btn plus" onclick="incrementPeople()">+</button>
+                                </div>
+                                <small class="form-hint">Minimal 1 orang, maksimal 20 orang</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="roomType">
+                                    <i class="fas fa-bed"></i> Tipe Kamar
+                                </label>
+                                <select id="roomType" name="roomType">
+                                    <option value="standard">Standard (2 orang)</option>
+                                    <option value="deluxe">Deluxe</option>
+                                    <option value="suite">Suite</option>
+                                    <option value="family">Family Room (4 orang)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Catatan Khusus -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-sticky-note"></i> Catatan Khusus</h2>
+                        <p>Permintaan khusus atau informasi tambahan</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="specialNotes">
+                            <i class="fas fa-edit"></i> Permintaan khusus, alergi makanan, dll.
+                        </label>
+                        <textarea id="specialNotes" name="specialNotes" rows="4" 
+                                  placeholder="Contoh: 
+• Perlu kursi roda
+• Alergi seafood
+• Request kamar lantai atas
+• Perayaan anniversary"></textarea>
+                        <small class="form-hint">Opsional. Isi jika ada permintaan khusus</small>
+                    </div>
+                </div>
+                
+                <!-- Ringkasan Pesanan -->
+                <div class="order-summary">
+                    <div class="section-header">
+                        <h2><i class="fas fa-receipt"></i> Ringkasan Pesanan</h2>
+                    </div>
+                    
+                    <div class="summary-content">
+                        <div class="summary-row">
+                            <span>Paket:</span>
+                            <span id="summaryPackage">-</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tanggal:</span>
+                            <span id="summaryDate">-</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Durasi:</span>
+                            <span id="summaryDuration">-</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Jumlah Orang:</span>
+                            <span id="summaryPeople">1</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tipe Kamar:</span>
+                            <span id="summaryRoom">Standard (2 orang)</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total Perkiraan:</span>
+                            <span id="summaryTotal">Rp 0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <div class="terms-agreement">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                            <span class="checkmark"></span>
+                            Saya menyetujui <a href="terms.html" target="_blank">Syarat & Ketentuan</a> dan 
+                            <a href="privacy.html" target="_blank">Kebijakan Privasi</a> TravelKu
+                        </label>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button type="button" class="btn-secondary" onclick="resetForm()">
+                            <i class="fas fa-redo"></i> Reset Form
+                        </button>
+                        <button type="submit" class="btn-primary">
+                            <i class="fab fa-whatsapp"></i> Lanjutkan ke WhatsApp
+                        </button>
+                    </div>
+                    
+                    <div class="form-notice">
+                        <i class="fas fa-info-circle"></i>
+                        Anda akan diarahkan ke WhatsApp untuk konfirmasi pembayaran dan dokumen
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/6281234567890?text=Halo%20TravelKu,%20saya%20butuh%20bantuan%20untuk%20booking" 
+       class="whatsapp-float" target="_blank">
+       <i class="fab fa-whatsapp"></i>
+       <span>Butuh Bantuan?</span>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>TravelKu</h4>
+                <p>Travel agency terpercaya sejak 2010 dengan pengalaman melayani ribuan wisatawan.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak Booking</h4>
+                <p><i class="fab fa-whatsapp"></i> +62 812-3456-7890</p>
+                <p><i class="fas fa-phone"></i> +62 813-4567-8901</p>
+                <p><i class="fas fa-envelope"></i> booking@travelku.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Jam Operasional</h4>
+                <p>Senin - Jumat: 08.00 - 17.00</p>
+                <p>Sabtu: 08.00 - 15.00</p>
+                <p>Minggu: 10.00 - 14.00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TravelKu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/id.js"></script>
+    <script src="booking.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

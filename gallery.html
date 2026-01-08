@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - TravelKu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">🌴 Dirgantara Travelindo</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Layanan</a></li>
+            <!-- <li><a href="articles.html">Artikel</a></li> -->
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html" class="active">Tentang Kami</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+            <li><a href="booking.html" class="booking-btn">Booking</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+    <section class="service-hero">
+        <div class="container">
+            <h1>Gallery</h1>
+            <p class="subtitle">Kami siap membantu Anda merencanakan perjalanan impian</p>
+        </div>
+    </section>
+    <section class="gallery-section">
+        <div class="gallery-header">
+            <h1>Gallery Perjalanan Kami</h1>
+            <p>Momen indah dari perjalanan bersama TravelKu</p>
+            
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="bali">Bali</button>
+                <button class="filter-btn" data-filter="lombok">Lombok</button>
+                <button class="filter-btn" data-filter="jepang">Jepang</button>
+                <button class="filter-btn" data-filter="wisatawan">Wisatawan</button>
+            </div>
+        </div>
+
+        <div class="gallery-container">
+            <!-- Bali Images -->
+            <div class="gallery-item" data-category="bali">
+                <a href="assets/images/gallery/bali1.jpg" data-lightbox="gallery" data-title="Pantai Kuta - Bali">
+                    <img src="assets/images/gallery/noimage.jpg" alt="Bali Beach">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Pantai Kuta, Bali</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="gallery-item" data-category="bali">
+                <a href="assets/images/gallery/bali2.jpg" data-lightbox="gallery" data-title="Ubud Rice Terrace">
+                    <img src="assets/images/gallery/noimage.jpg" alt="Ubud">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Ubud Rice Terrace</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Lombok Images -->
+            <div class="gallery-item" data-category="lombok">
+                <a href="assets/images/gallery/lombok1.jpg" data-lightbox="gallery" data-title="Pantai Pink - Lombok">
+                    <img src="assets/images/gallery/noimage.jpg" alt="Lombok Beach">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Pantai Pink, Lombok</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="gallery-item" data-category="lombok">
+                <a href="assets/images/gallery/lombok2.jpg" data-lightbox="gallery" data-title="Gili Trawangan">
+                    <img src="assets/images/gallery/noimage.jpg" alt="Gili Islands">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Gili Trawangan</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Jepang Images -->
+            <div class="gallery-item" data-category="jepang">
+                <a href="assets/images/gallery/jepang1.jpg" data-lightbox="gallery" data-title="Mount Fuji - Jepang">
+                    <img src="assets/images/gallery/noimage.jpg" alt="Mount Fuji">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Mount Fuji, Jepang</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Wisatawan Images -->
+            <div class="gallery-item" data-category="wisatawan">
+                <a href="assets/images/gallery/traveler1.jpg" data-lightbox="gallery" data-title="Kelompok Wisatawan">
+                    <img src="assets/images/gallery/noimage.jpg" alt="Travel Group">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Happy Travelers</p>  
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Add more items as needed -->
+        </div>
+        
+        <div class="gallery-instagram">
+            <h3>Follow Instagram Kami</h3>
+            <p>Lihat lebih banyak momen di @travelku.id</p>
+            <a href="https://instagram.com/travelku.id" class="instagram-btn" target="_blank">
+                <i class="fab fa-instagram"></i> @travelku.id
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TravelKu. All rights reserved.</p>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/6281234567890?text=Halo%20TravelKu,%20saya%20lihat%20gallery%20dan%20tertarik%20untuk%20booking" 
+       class="whatsapp-btn" 
+       target="_blank">
+       <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

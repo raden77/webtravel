@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak TravelKu | Hubungi Kami untuk Info & Booking</title>
+    <meta name="description" content="Hubungi TravelKu untuk informasi paket wisata, booking, atau pertanyaan lainnya. Customer service kami siap membantu Anda 24/7.">
+    <meta name="keywords" content="kontak travelku, customer service travel, booking wisata, alamat travel agency">
+    
+    <!-- Structured Data for Contact Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Kontak TravelKu",
+      "description": "Halaman kontak untuk informasi dan booking paket wisata",
+      "url": "https://travelku.com/contact.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "TravelKu",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Sudirman No. 123",
+          "addressLocality": "Jakarta",
+          "addressRegion": "DKI Jakarta",
+          "postalCode": "10220",
+          "addressCountry": "ID"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+62-812-3456-7890",
+            "contactType": "customer service",
+            "availableLanguage": ["Indonesian", "English"],
+            "hoursAvailable": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "08:00",
+              "closes": "17:00"
+            }
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+62-813-4567-8901",
+            "contactType": "sales",
+            "hoursAvailable": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "16:00"
+            }
+          }
+        ],
+        "email": "info@travelku.com",
+        "sameAs": [
+          "https://facebook.com/travelku.id",
+          "https://instagram.com/travelku.id"
+        ]
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🌴 Dirgantara Travelindo</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Layanan</a></li>
+            <!-- <li><a href="articles.html">Artikel</a></li> -->
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="contact.html" class="active">Kontak</a></li>
+            <li><a href="booking.html" class="booking-btn">Booking</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Hubungi Kami</h1>
+            <p class="subtitle">Kami siap membantu Anda merencanakan perjalanan impian</p>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <!-- <section class="contact-info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Alamat Kantor</h3>
+                    <p>Jl. Sudirman No. 123, RT.1/RW.1</p>
+                    <p>Kelurahan Senayan, Kecamatan Kebayoran Baru</p>
+                    <p>Jakarta Selatan, DKI Jakarta 12190</p>
+                    <a href="https://maps.google.com/?q=Jl.+Sudirman+No.+123,+Jakarta" 
+                       target="_blank" class="map-link">
+                        <i class="fas fa-directions"></i> Buka di Google Maps
+                    </a>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Telepon & WhatsApp</h3>
+                    <p><strong>Customer Service:</strong></p>
+                    <a href="tel:+6281234567890" class="phone-link">+62 812-3456-7890</a>
+                    <p><strong>Sales & Marketing:</strong></p>
+                    <a href="tel:+6281345678901" class="phone-link">+62 813-4567-8901</a>
+                    <p><strong>Emergency (24/7):</strong></p>
+                    <a href="tel:+6281456789012" class="phone-link">+62 814-5678-9012</a>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email & Social Media</h3>
+                    <p><strong>Informasi Umum:</strong></p>
+                    <a href="mailto:info@travelku.com" class="email-link">info@travelku.com</a>
+                    <p><strong>Booking & Reservasi:</strong></p>
+                    <a href="mailto:booking@travelku.com" class="email-link">booking@travelku.com</a>
+                    <p><strong>Kerjasama:</strong></p>
+                    <a href="mailto:partnership@travelku.com" class="email-link">partnership@travelku.com</a>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Jam Operasional</h3>
+                    <div class="hours-list">
+                        <div class="hour-item">
+                            <span>Senin - Jumat</span>
+                            <span>08.00 - 17.00</span>
+                        </div>
+                        <div class="hour-item">
+                            <span>Sabtu</span>
+                            <span>08.00 - 15.00</span>
+                        </div>
+                        <div class="hour-item">
+                            <span>Minggu</span>
+                            <span>Libur</span>
+                        </div>
+                        <div class="hour-item">
+                            <span>Hari Libur Nasional</span>
+                            <span>Libur</span>
+                        </div>
+                    </div>
+                    <p class="note">* Customer service WhatsApp 24/7</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contact Form & Map Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-map-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <h2>Kirim Pesan kepada Kami</h2>
+                        <p>Isi formulir di bawah ini dan tim kami akan membalas dalam 1x24 jam</p>
+                    </div>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">
+                                    <i class="fas fa-user"></i> Nama Lengkap *
+                                </label>
+                                <input type="text" id="name" name="name" required 
+                                       placeholder="Masukkan nama lengkap">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">
+                                    <i class="fas fa-envelope"></i> Email *
+                                </label>
+                                <input type="email" id="email" name="email" required 
+                                       placeholder="email@contoh.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">
+                                    <i class="fas fa-phone"></i> Nomor Telepon *
+                                </label>
+                                <input type="tel" id="phone" name="phone" required 
+                                       placeholder="0812-3456-7890">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">
+                                    <i class="fas fa-tag"></i> Subjek *
+                                </label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Pilih Subjek</option>
+                                    <option value="booking">Booking / Reservasi</option>
+                                    <option value="info">Informasi Paket</option>
+                                    <option value="complaint">Keluhan / Komplain</option>
+                                    <option value="partnership">Kerjasama Bisnis</option>
+                                    <option value="other">Lainnya</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="destination">
+                                <i class="fas fa-map-marker-alt"></i> Destinasi yang Diminati
+                            </label>
+                            <div class="destination-checkboxes">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="destination" value="bali"> Bali
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="destination" value="lombok"> Lombok
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="destination" value="jepang"> Jepang
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="destination" value="singapore"> Singapore
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="destination" value="thailand"> Thailand
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">
+                                <i class="fas fa-comment-dots"></i> Pesan Anda *
+                            </label>
+                            <textarea id="message" name="message" rows="6" required 
+                                      placeholder="Tulis pesan Anda di sini..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" checked>
+                                Saya ingin berlangganan newsletter dan info promo
+                            </label>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i> Kirim Pesan
+                            </button>
+                            <p class="form-note">
+                                <i class="fas fa-info-circle"></i>
+                                Anda juga bisa menghubungi kami langsung via WhatsApp untuk respon lebih cepat
+                            </p>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Map & Quick Contact -->
+                <div class="map-quick-container">
+                    <!-- Google Map -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613506864!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sJl.%20Sudirman%20No.123%2C%20RT.1%2FRW.1%2C%20Senayan%2C%20Kec.%20Kby.%20Baru%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012190!5e0!3m2!1sid!2sid!4v1643016839533!5m2!1sid!2sid" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="map-overlay">
+                            <div class="map-info">
+                                <h4><i class="fas fa-map-pin"></i> Lokasi Kantor</h4>
+                                <p>Jl. Sudirman No. 123, Jakarta Selatan</p>
+                                <a href="https://maps.google.com/?q=Jl.+Sudirman+No.+123,+Jakarta" 
+                                   target="_blank" class="directions-btn">
+                                    <i class="fas fa-directions"></i> Petunjuk Arah
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Contact -->
+                    <div class="quick-contact">
+                        <h3>Kontak Cepat</h3>
+                        <div class="quick-buttons">
+                            <a href="https://wa.me/6281234567890?text=Halo%20TravelKu,%20saya%20ingin%20bertanya%20tentang%20paket%20wisata" 
+                               class="quick-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a href="tel:+6281234567890" class="quick-btn phone-btn">
+                                <i class="fas fa-phone"></i> Telepon
+                            </a>
+                            <a href="mailto:info@travelku.com" class="quick-btn email-btn">
+                                <i class="fas fa-envelope"></i> Email
+                            </a>
+                        </div>
+                        
+                        <div class="social-contact">
+                            <h4>Follow Kami</h4>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon facebook" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon instagram" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon twitter" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon youtube" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="social-icon tiktok" target="_blank">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Quick Links -->
+                        <div class="faq-links">
+                            <h4>Pertanyaan Umum</h4>
+                            <ul>
+                                <li><a href="faq.html#pembayaran">Cara Pembayaran</a></li>
+                                <li><a href="faq.html#cancellation">Kebijakan Pembatalan</a></li>
+                                <li><a href="faq.html#visa">Persyaratan Visa</a></li>
+                                <li><a href="faq.html#insurance">Asuransi Perjalanan</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <!-- <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pertanyaan yang Sering Diajukan</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Berapa lama waktu respon untuk pertanyaan via form kontak?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami akan membalas pesan Anda maksimal dalam 1x24 jam pada hari kerja. Untuk respon lebih cepat, silakan hubungi kami via WhatsApp.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah bisa konsultasi via telepon atau WhatsApp?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tentu! Anda bisa menghubungi customer service kami via telepon di 0812-3456-7890 atau WhatsApp di nomor yang sama. Tim kami siap membantu 24/7 via WhatsApp.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah ada biaya konsultasi?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tidak ada biaya konsultasi. Kami dengan senang hati akan membantu Anda merencanakan perjalanan tanpa biaya apapun hingga Anda memutuskan untuk booking.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bisa datang langsung ke kantor untuk konsultasi?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya, Anda bisa datang langsung ke kantor kami di jam operasional. Untuk kenyamanan, kami sarankan membuat janji terlebih dahulu via telepon atau WhatsApp.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-cta">
+                <p>Masih ada pertanyaan? <a href="faq.html">Lihat FAQ lengkap</a> atau <a href="https://wa.me/6281234567890">hubungi kami via WhatsApp</a></p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>TravelKu</h4>
+                <p>Travel agency terpercaya sejak 2010 dengan pengalaman melayani ribuan wisatawan.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Sudirman No. 123, Jakarta</p>
+                <p><i class="fas fa-phone"></i> +62 812-3456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@travelku.com</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Jam Operasional</h4>
+                <p>Senin - Jumat: 08.00 - 17.00</p>
+                <p>Sabtu: 08.00 - 15.00</p>
+                <p>Minggu & Hari Libur: Tutup</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TravelKu. All rights reserved. | <a href="privacy.html">Kebijakan Privasi</a> | <a href="terms.html">Syarat & Ketentuan</a></p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/6281234567890?text=Halo%20TravelKu,%20saya%20ingin%20bertanya%20tentang%20paket%20wisata" 
+       class="whatsapp-btn" target="_blank">
+       <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
