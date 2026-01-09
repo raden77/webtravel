@@ -38,14 +38,14 @@ function bookService(route, price) {
     }).format(price);
     
     // Create WhatsApp message
-    const message = `Halo TravelKu, saya ingin booking travel ${route}%0A%0A` +
+    const message = `Halo Dirgantara Travelindo, saya ingin booking travel ${route}%0A%0A` +
                    `Rute: ${route}%0A` +
                    `Harga: ${formattedPrice}%0A` +
                    `%0A` +
                    `Mohon info jadwal tersedia dan cara bookingnya.`;
     
     // WhatsApp number (replace with your number)
-    const whatsappNumber = '6281234567890';
+    const whatsappNumber = '62881011010140';
     
     // Open WhatsApp
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
