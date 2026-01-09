@@ -81,10 +81,10 @@
 
     <!-- Services Grid -->
     <section class="services-grid-section">
-        <div class="container">
-            <div class="services-grid">
+        <div class="container" >
+            <div class="services-grid" id="serviceBlock">
                 <!-- Service 1: Palembang - Jakarta -->
-                <div class="service-card">
+                <!-- <div class="service-card">
                     <div class="service-header">
                         <h2>Travel Palembang - Jakarta</h2>
                         <div class="service-features">
@@ -134,10 +134,10 @@
                         </div>
                         <span class="rating-text">4.5/5 (128 review)</span>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Service 2: Palembang - Jambi -->
-                <div class="service-card">
+                <!-- <div class="service-card">
                     <div class="service-header">
                         <h2>Travel Palembang - Jambi</h2>
                         <div class="service-features">
@@ -187,10 +187,10 @@
                         </div>
                         <span class="rating-text">4.0/5 (96 review)</span>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Service 3: Palembang - Lampung -->
-                <div class="service-card">
+                <!-- <div class="service-card">
                     <div class="service-header">
                         <h2>Travel Palembang - Lampung</h2>
                         <div class="service-features">
@@ -240,10 +240,10 @@
                         </div>
                         <span class="rating-text">5.0/5 (154 review)</span>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Service 4: Palembang - Bandung (Tambahan) -->
-                <div class="service-card">
+                <!-- <div class="service-card">
                     <div class="service-header">
                         <h2>Travel Palembang - Bandung</h2>
                         <div class="service-features">
@@ -293,10 +293,10 @@
                         </div>
                         <span class="rating-text">4.5/5 (87 review)</span>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Service 5: Palembang - Medan (Tambahan) -->
-                <div class="service-card">
+                <!-- <div class="service-card">
                     <div class="service-header">
                         <h2>Travel Palembang - Medan</h2>
                         <div class="service-features">
@@ -346,10 +346,10 @@
                         </div>
                         <span class="rating-text">4.0/5 (63 review)</span>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Service 6: Palembang - Padang (Tambahan) -->
-                <div class="service-card">
+                <!-- <div class="service-card">
                     <div class="service-header">
                         <h2>Travel Palembang - Padang</h2>
                         <div class="service-features">
@@ -399,7 +399,7 @@
                         </div>
                         <span class="rating-text">4.5/5 (72 review)</span>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -501,5 +501,12 @@
 
     <script src="script.js"></script>
     <script src="services.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize any services-related functionality if needed
+            document.getElementById('serviceBlock').innerHTML = `MEMUAT DATA.....`;
+            loadServices();
+        });
+    </script>
 </body>
 </html>

@@ -6,7 +6,7 @@
 /* Reset untuk index hero agar tidak bentrok */
 .index-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('assets/images/hero-bg.jpg');
+                url('assets/images/DT_logo.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

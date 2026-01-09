@@ -1,3 +1,5 @@
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwhTFddRzMrZLJMP3F_yr83bW1w5BXoLiGhrWBGFypxVj0wiFzKgC6fg2URz4QaHL8W0A/exec';
+
 // Services Page JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize service booking functionality
@@ -29,7 +31,7 @@ function initServiceBooking() {
 }
 
 // Book service function
-function bookService(route, price) {
+function bookService(route, price, message='') {
     // Format price to IDR
     const formattedPrice = new Intl.NumberFormat('id-ID', {
         style: 'currency',
@@ -38,11 +40,11 @@ function bookService(route, price) {
     }).format(price);
     
     // Create WhatsApp message
-    const message = `Halo Dirgantara Travelindo, saya ingin booking travel ${route}%0A%0A` +
-                   `Rute: ${route}%0A` +
-                   `Harga: ${formattedPrice}%0A` +
-                   `%0A` +
-                   `Mohon info jadwal tersedia dan cara bookingnya.`;
+    // const message = `Halo Dirgantara Travelindo, saya ingin booking travel ${route}%0A%0A` +
+    //                `Rute: ${route}%0A` +
+    //                `Harga: ${formattedPrice}%0A` +
+    //                `%0A` +
+    //                `Mohon info jadwal tersedia dan cara bookingnya.`;
     
     // WhatsApp number (replace with your number)
     const whatsappNumber = '62881011010140';
@@ -415,6 +417,106 @@ function addSearchFunctionality() {
         searchField.focus();
     });
 }
+
+async function loadServices() {
+
+        try {
+          const params = new URLSearchParams({
+            action: 'getServices',
+          });
+
+          const url = `${APPS_SCRIPT_URL}?${params.toString()}`;
+          const response = await fetch(url);
+          const result = await response.json();
+
+          const { data, total } = result;
+          
+          if (data.length === 0) {
+            // noData.classList.remove('d-none');
+            confirm('Data tidak ditemukan untuk filter yang dipilih.');
+          } else {
+           
+
+            const serviceBlock = document.getElementById('serviceBlock');
+            serviceBlock.innerHTML = '';
+            data.forEach(row => {
+
+                let formattedPrice = new Intl.NumberFormat('id-ID', {
+                    style: 'currency',
+                    currency: 'IDR',
+                    minimumFractionDigits: 0
+                }).format(row.harga);
+               
+                serviceBlock.innerHTML += `
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h2>${row.rute}</h2>
+                            <div class="service-features">
+                                <span class="feature-tag">
+                                    <i class="fas fa-bolt"></i> Cepat
+                                </span>
+                                <span class="feature-tag">
+                                    <i class="fas fa-couch"></i> Nyaman
+                                </span>
+                                <span class="feature-tag">
+                                    <i class="fas fa-broom"></i> Bersih
+                                </span>
+                            </div>
+                        </div>
+                    
+                        <div class="service-schedule">
+                            <h3><i class="fas fa-clock"></i> Jadwal Jemput</h3>
+                            <div class="schedule-list">
+                                <div class="schedule-item">
+                                    <div class="schedule-time">Jam ${row.waktu1}</div>
+                                    <div class="schedule-label">${row.jadwal1}</div>
+                                </div>
+                                <div class="schedule-item">
+                                    <div class="schedule-time">Jam ${row.waktu2}</div>
+                                    <div class="schedule-label">${row.jadwal2}</div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="service-footer">
+                            <div class="service-price">
+                                <div class="price-label">Mulai dari</div>
+                                <div class="price-amount">${formattedPrice}</div>
+                            </div>
+                            <button class="book-btn" onclick="bookService('${row.rute}', ${row.harga}, '${row.pesan}')">
+                                Booking Sekarang
+                            </button>
+                        </div>
+                        
+                        <div class="service-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.5/5 (128 review)</span>
+                        </div>
+                    </div>
+                
+                `;
+                // serviceBlock.appendChild(serviceCard);
+            });
+            
+          }
+
+        //   renderPagination();
+
+        } catch (err) {
+          console.error('Error:', err);
+          
+        } finally {
+            console.log('Load services completed');
+        }
+}
+
+   
 
 // Initialize search if needed
 // addSearchFunctionality();
