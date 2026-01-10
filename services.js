@@ -425,86 +425,166 @@ async function loadServices() {
             action: 'getServices',
           });
 
-          const url = `${APPS_SCRIPT_URL}?${params.toString()}`;
-          const response = await fetch(url);
-          const result = await response.json();
+            const url = `${APPS_SCRIPT_URL}?${params.toString()}`;
+            const response = await fetch(url);
+            const result = await response.json();
 
-          const { data, total } = result;
-          
-          if (data.length === 0) {
-            // noData.classList.remove('d-none');
-            confirm('Data tidak ditemukan untuk filter yang dipilih.');
-          } else {
-           
-
+            const { data, total } = result;
             const serviceBlock = document.getElementById('serviceBlock');
-            serviceBlock.innerHTML = '';
-            data.forEach(row => {
-
-                let formattedPrice = new Intl.NumberFormat('id-ID', {
-                    style: 'currency',
-                    currency: 'IDR',
-                    minimumFractionDigits: 0
-                }).format(row.harga);
-               
-                serviceBlock.innerHTML += `
-                    <div class="service-card">
-                        <div class="service-header">
-                            <h2>${row.rute}</h2>
-                            <div class="service-features">
-                                <span class="feature-tag">
-                                    <i class="fas fa-bolt"></i> Cepat
-                                </span>
-                                <span class="feature-tag">
-                                    <i class="fas fa-couch"></i> Nyaman
-                                </span>
-                                <span class="feature-tag">
-                                    <i class="fas fa-broom"></i> Bersih
-                                </span>
-                            </div>
-                        </div>
-                    
-                        <div class="service-schedule">
-                            <h3><i class="fas fa-clock"></i> Jadwal Jemput</h3>
-                            <div class="schedule-list">
-                                <div class="schedule-item">
-                                    <div class="schedule-time">Jam ${row.waktu1}</div>
-                                    <div class="schedule-label">${row.jadwal1}</div>
-                                </div>
-                                <div class="schedule-item">
-                                    <div class="schedule-time">Jam ${row.waktu2}</div>
-                                    <div class="schedule-label">${row.jadwal2}</div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="service-footer">
-                            <div class="service-price">
-                                <div class="price-label">Mulai dari</div>
-                                <div class="price-amount">${formattedPrice}</div>
-                            </div>
-                            <button class="book-btn" onclick="bookService('${row.rute}', ${row.harga}, '${row.pesan}')">
-                                Booking Sekarang
-                            </button>
-                        </div>
-                        
-                        <div class="service-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <span class="rating-text">4.5/5 (128 review)</span>
-                        </div>
-                    </div>
-                
-                `;
-                // serviceBlock.appendChild(serviceCard);
-            });
             
-          }
+            let servicesData= JSON.parse(localStorage.getItem('servicesData')) || [];
+            if (servicesData.length > 0) {
+
+                    console.log('Data Tersedia.');
+                    servicesData.forEach(row => {
+                        let formattedPrice = new Intl.NumberFormat('id-ID', {
+                            style: 'currency',
+                            currency: 'IDR',
+                            minimumFractionDigits: 0
+                        }).format(row.harga);
+                    
+                        serviceBlock.innerHTML += `
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <h2>${row.rute}</h2>
+                                    <div class="service-features">
+                                        <span class="feature-tag">
+                                            <i class="fas fa-bolt"></i> Cepat
+                                        </span>
+                                        <span class="feature-tag">
+                                            <i class="fas fa-couch"></i> Nyaman
+                                        </span>
+                                        <span class="feature-tag">
+                                            <i class="fas fa-broom"></i> Bersih
+                                        </span>
+                                    </div>
+                                </div>
+                            
+                                <div class="service-schedule">
+                                    <h3><i class="fas fa-clock"></i> Jadwal Jemput</h3>
+                                    <div class="schedule-list">
+                                        <div class="schedule-item">
+                                            <div class="schedule-time">Jam ${row.waktu1}</div>
+                                            <div class="schedule-label">${row.jadwal1}</div>
+                                        </div>
+                                        <div class="schedule-item">
+                                            <div class="schedule-time">Jam ${row.waktu2}</div>
+                                            <div class="schedule-label">${row.jadwal2}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="service-footer">
+                                    <div class="service-price">
+                                        <div class="price-label">Mulai dari</div>
+                                        <div class="price-amount">${formattedPrice}</div>
+                                    </div>
+                                    <button class="book-btn" onclick="bookService('${row.rute}', ${row.harga}, '${row.pesan}')">
+                                        Booking Sekarang
+                                    </button>
+                                </div>
+                                
+                                <div class="service-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-text">4.5/5 (128 review)</span>
+                                </div>
+                            </div>
+                        
+                        `;
+                    });
+                    
+                    return;
+            }else{
+
+                if (data.length === 0) {
+                    // noData.classList.remove('d-none');
+                    confirm('Data tidak ditemukan untuk filter yang dipilih.');
+                } else {
+                    
+                    document.getElementById('serviceBlock').innerHTML = `MEMUAT DATA.....`;
+                    console.log('Memuat data baru dari server...');
+                    setTimeout(() => {
+                        localStorage.setItem('servicesData', JSON.stringify(data));
+                       
+                        serviceBlock.innerHTML = '';
+                        data.forEach(row => {
+            
+                            let formattedPrice = new Intl.NumberFormat('id-ID', {
+                                style: 'currency',
+                                currency: 'IDR',
+                                minimumFractionDigits: 0
+                            }).format(row.harga);
+                        
+                            serviceBlock.innerHTML += `
+                                <div class="service-card">
+                                    <div class="service-header">
+                                        <h2>${row.rute}</h2>
+                                        <div class="service-features">
+                                            <span class="feature-tag">
+                                                <i class="fas fa-bolt"></i> Cepat
+                                            </span>
+                                            <span class="feature-tag">
+                                                <i class="fas fa-couch"></i> Nyaman
+                                            </span>
+                                            <span class="feature-tag">
+                                                <i class="fas fa-broom"></i> Bersih
+                                            </span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="service-schedule">
+                                        <h3><i class="fas fa-clock"></i> Jadwal Jemput</h3>
+                                        <div class="schedule-list">
+                                            <div class="schedule-item">
+                                                <div class="schedule-time">Jam ${row.waktu1}</div>
+                                                <div class="schedule-label">${row.jadwal1}</div>
+                                            </div>
+                                            <div class="schedule-item">
+                                                <div class="schedule-time">Jam ${row.waktu2}</div>
+                                                <div class="schedule-label">${row.jadwal2}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="service-footer">
+                                        <div class="service-price">
+                                            <div class="price-label">Mulai dari</div>
+                                            <div class="price-amount">${formattedPrice}</div>
+                                        </div>
+                                        <button class="book-btn" onclick="bookService('${row.rute}', ${row.harga}, '${row.pesan}')">
+                                            Booking Sekarang
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="service-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <span class="rating-text">4.5/5 (128 review)</span>
+                                    </div>
+                                </div>
+                            
+                            `;
+                            // serviceBlock.appendChild(serviceCard);
+                        });
+                        
+                    }, 1000);
+    
+                    
+                    
+                }
+            }
+
 
         //   renderPagination();
 
