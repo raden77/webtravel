@@ -1,6 +1,5 @@
 /* ====================
-   INDEX PAGE STYLES ONLY
-   Tidak mempengaruhi halaman lain
+   INDEX PAGE STYLES ONLY - MOBILE FIX
    ==================== */
 
 /* Reset untuk index hero agar tidak bentrok */
@@ -9,55 +8,63 @@
                 url('assets/images/DT_logo.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll; /* Ubah dari fixed untuk mobile */
     color: white;
     text-align: center;
-    padding: 6rem 1rem 4rem;
+    padding: 5rem 1rem 3rem; /* Kurangi padding untuk mobile */
     position: relative;
     margin-top: 0;
+    min-height: 80vh; /* Pastikan tinggi cukup di mobile */
 }
 
 .index-hero-content {
     max-width: 800px;
-    margin: 0 auto 3rem;
+    margin: 0 auto 2rem; /* Kurangi margin bottom */
 }
 
 .index-hero h1 {
-    font-size: 3.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 2rem; /* Ukuran lebih kecil untuk mobile */
+    margin-bottom: 1rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.3;
+    padding: 0 0.5rem;
 }
 
 .index-hero .tagline {
-    font-size: 1.3rem;
+    font-size: 1rem; /* Ukuran lebih kecil */
     opacity: 0.9;
-    margin-bottom: 2.5rem;
-    line-height: 1.6;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;
 }
 
 .index-hero-buttons {
     display: flex;
-    gap: 1rem;
+    flex-direction: column; /* Tombol vertikal di mobile */
+    gap: 0.8rem;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 2rem;
+    align-items: center;
+    margin-top: 1.5rem;
+    width: 100%;
 }
 
 .index-cta-button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.5rem; /* Padding lebih kecil */
     background: #3498db;
     color: white;
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 25px;
     font-weight: 600;
     transition: all 0.3s;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    width: 90%; /* Lebar tombol 90% di mobile */
+    max-width: 300px;
 }
 
 .index-cta-button.secondary {
@@ -74,106 +81,111 @@
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Hero Stats - hanya untuk index */
+/* Hero Stats - mobile optimasi */
 .index-hero-stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
-    max-width: 800px;
-    margin: 3rem auto 0;
-    padding: 2rem;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom di mobile */
+    gap: 1rem; /* Gap lebih kecil */
+    max-width: 100%;
+    margin: 2rem auto 0;
+    padding: 1rem;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    border-radius: 15px;
+    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .index-stat {
     text-align: center;
-    padding: 1rem;
+    padding: 0.8rem;
 }
 
 .index-stat-number {
-    font-size: 2.5rem;
+    font-size: 1.8rem; /* Lebih kecil di mobile */
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     color: #3498db;
 }
 
 .index-stat-label {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     opacity: 0.9;
+    line-height: 1.2;
 }
 
-/* About Section - hanya untuk index */
+/* About Section - mobile optimasi */
 .index-about-section {
-    padding: 5rem 1rem;
+    padding: 3rem 1rem; /* Kurangi padding */
     background: #f8f9fa;
 }
 
 .index-about-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    display: flex;
+    flex-direction: column; /* Stack vertikal di mobile */
+    gap: 2rem;
     align-items: center;
-    max-width: 1200px;
-    margin: 3rem auto 0;
-}
-
-@media (min-width: 992px) {
-    .index-about-content {
-        grid-template-columns: 1fr 1fr;
-    }
+    max-width: 100%;
+    margin: 2rem auto 0;
 }
 
 .index-about-text h3 {
     color: #2c3e50;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem; /* Ukuran lebih kecil */
+    margin-bottom: 1rem;
     line-height: 1.3;
+    text-align: center; /* Rata tengah di mobile */
 }
 
 .index-about-text p {
     color: #555;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    text-align: justify; /* Justify untuk readability di mobile */
 }
 
 .index-about-points {
-    margin: 2rem 0;
+    margin: 1.5rem 0;
 }
 
 .index-point {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
 }
 
 .index-point i {
     color: #2ecc71;
-    margin-top: 0.3rem;
+    margin-top: 0.2rem;
     flex-shrink: 0;
+    font-size: 1rem;
 }
 
 .index-point span {
     color: #444;
     line-height: 1.5;
+    font-size: 0.95rem;
 }
 
 .index-learn-more-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     background: #3498db;
     color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 30px;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     margin-top: 1rem;
     transition: all 0.3s;
+    width: 100%;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Agar center berfungsi */
 }
 
 .index-learn-more-btn:hover {
@@ -183,14 +195,16 @@
 
 .index-about-image {
     position: relative;
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 1rem;
 }
 
 .index-about-image img {
     width: 100%;
-    height: 400px;
+    height: 250px; /* Tinggi lebih kecil */
     object-fit: cover;
     display: block;
     transition: transform 0.5s;
@@ -207,7 +221,7 @@
     right: 0;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
     color: white;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .index-overlay-content {
@@ -215,49 +229,51 @@
 }
 
 .index-overlay-content i {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
     color: #3498db;
 }
 
 .index-overlay-content h4 {
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .index-overlay-content p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     opacity: 0.9;
     margin: 0;
 }
 
-/* Services Section (Index) - berbeda dari services.html */
+/* Services Section - mobile optimasi */
 .index-services-section {
-    padding: 5rem 1rem;
+    padding: 3rem 1rem;
     background: white;
 }
 
 .index-services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    display: flex;
+    flex-direction: column; /* Stack vertikal di mobile */
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .index-service-card {
     background: white;
-    border-radius: 15px;
-    padding: 2rem;
+    border-radius: 10px;
+    padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s;
     border: 1px solid #eee;
     position: relative;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .index-service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     border-color: #3498db;
 }
 
@@ -267,63 +283,65 @@
 
 .index-featured-badge {
     position: absolute;
-    top: -10px;
-    right: 20px;
+    top: -8px;
+    right: 15px;
     background: #e74c3c;
     color: white;
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.7rem;
     font-weight: 600;
 }
 
 .index-service-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #3498db;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .index-service-card h3 {
     color: #2c3e50;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
 }
 
 .index-service-features {
     display: flex;
-    justify-content: center;
-    gap: 0.8rem;
     flex-wrap: wrap;
-    margin-bottom: 1.5rem;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .index-service-features span {
     background: #f8f9fa;
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
     color: #555;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 0.3rem;
+    white-space: nowrap;
 }
 
 .index-service-features i {
     color: #3498db;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 .index-service-schedule {
     background: #f8f9fa;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
 }
 
 .index-service-schedule h4 {
     color: #2c3e50;
-    font-size: 1rem;
-    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
 }
 
 .index-service-schedule p {
@@ -332,21 +350,22 @@
     justify-content: center;
     gap: 0.5rem;
     color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+    flex-wrap: wrap;
 }
 
 .index-service-schedule i {
     color: #f39c12;
-    width: 16px;
+    width: 14px;
 }
 
 .index-service-price {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .index-price {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #e74c3c;
 }
@@ -354,16 +373,16 @@
 .index-price-note {
     display: block;
     color: #888;
-    font-size: 0.9rem;
-    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
 }
 
 .index-service-book-btn {
     display: block;
     background: #25D366;
     color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 30px;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s;
@@ -371,29 +390,34 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    font-size: 0.9rem;
 }
 
 .index-service-book-btn:hover {
     background: #1da851;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .index-view-all-services {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .index-view-all-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     background: #2c3e50;
     color: white;
-    padding: 1rem 2rem;
-    border-radius: 30px;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 250px;
 }
 
 .index-view-all-btn:hover {
@@ -401,23 +425,23 @@
     transform: translateY(-3px);
 }
 
-/* Why Choose Us Section - hanya untuk index */
+/* Why Choose Us Section - mobile optimasi */
 .index-why-choose-section {
-    padding: 5rem 1rem;
+    padding: 3rem 1rem;
     background: #f8f9fa;
 }
 
 .index-reasons-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .index-reason-card {
     background: white;
-    border-radius: 15px;
-    padding: 2rem;
+    border-radius: 10px;
+    padding: 1.5rem;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s;
@@ -425,277 +449,368 @@
 }
 
 .index-reason-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     border-color: #3498db;
 }
 
 .index-reason-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #3498db;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .index-reason-card h3 {
     color: #2c3e50;
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
 }
 
 .index-reason-card p {
     color: #666;
-    line-height: 1.6;
-    font-size: 0.95rem;
+    line-height: 1.5;
+    font-size: 0.9rem;
 }
 
-/* Testimonial Section - hanya untuk index */
+/* Testimonial Section - mobile optimasi */
 .index-testimonial-section {
-    margin-top: 4rem;
-    padding-top: 3rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
     border-top: 1px solid #eee;
 }
 
 .index-testimonial-section h3 {
     text-align: center;
     color: #2c3e50;
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .index-testimonials {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .index-testimonial {
     background: white;
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .index-testimonial-content {
     background: #f8f9fa;
-    border-radius: 10px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
     position: relative;
 }
 
 .index-testimonial-content:after {
     content: '';
     position: absolute;
-    bottom: -10px;
-    left: 40px;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #f8f9fa;
+    bottom: -8px;
+    left: 30px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #f8f9fa;
 }
 
 .index-testimonial-content p {
     color: #555;
     font-style: italic;
-    line-height: 1.6;
+    line-height: 1.5;
     margin: 0;
+    font-size: 0.9rem;
 }
 
 .index-testimonial-author {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
 .index-author-avatar {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background: #3498db;
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .index-author-info h4 {
     color: #2c3e50;
     margin-bottom: 0.2rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .index-author-info span {
     color: #888;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
-/* Booking CTA Section - hanya untuk index */
+/* Booking CTA Section - mobile optimasi */
 .index-booking-cta-section {
-    padding: 5rem 1rem;
+    padding: 3rem 1rem;
     background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
     color: white;
     text-align: center;
 }
 
 .index-cta-content {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .index-cta-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
 }
 
 .index-cta-content p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     opacity: 0.9;
-    margin-bottom: 2.5rem;
-    max-width: 600px;
+    margin-bottom: 2rem;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.5;
 }
 
 .index-cta-buttons {
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.8rem;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    width: 100%;
 }
 
 .index-cta-button.primary {
     background: #25D366;
     border: none;
+    width: 90%;
+    max-width: 300px;
 }
 
 .index-cta-button.secondary {
     background: transparent;
     border: 2px solid white;
+    width: 90%;
+    max-width: 300px;
 }
 
 .index-cta-features {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1rem;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    justify-content: center;
 }
 
 .index-feature {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
+    font-size: 0.9rem;
 }
 
 .index-feature i {
     color: #2ecc71;
 }
 
-/* Section Header khusus index */
+/* Section Header khusus index - mobile */
 .index-section-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
 }
 
 .index-section-header h2 {
     color: #2c3e50;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
 }
 
 .index-underline {
-    width: 80px;
-    height: 4px;
+    width: 60px;
+    height: 3px;
     background: #3498db;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 1rem;
     border-radius: 2px;
 }
 
 .index-section-subtitle {
     color: #666;
-    font-size: 1.1rem;
-    max-width: 600px;
+    font-size: 0.95rem;
+    max-width: 100%;
     margin: 0 auto;
-    line-height: 1.6;
+    line-height: 1.5;
+    padding: 0 0.5rem;
 }
 
-/* Responsive Design untuk index saja */
-@media (max-width: 768px) {
+/* Perbaikan untuk teks panjang di mobile */
+p, span, div {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Touch-friendly untuk semua tombol dan link */
+button, a, .index-cta-button, .index-service-book-btn, .index-view-all-btn, .index-learn-more-btn {
+    min-height: 44px; /* Minimum touch target size */
+}
+
+/* Smooth scrolling untuk mobile */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ====================
+   MEDIA QUERIES UNTUK TABLET & DESKTOP
+   ==================== */
+
+/* Tablet (min-width: 768px) */
+@media (min-width: 768px) {
+    .index-hero {
+        padding: 6rem 2rem 4rem;
+        background-attachment: fixed;
+    }
+    
     .index-hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
     
     .index-hero .tagline {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     
     .index-hero-buttons {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     
     .index-cta-button {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
+        width: auto;
+        padding: 1rem 2rem;
     }
     
     .index-hero-stats {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
         padding: 1.5rem;
     }
     
-    .index-stat-number {
-        font-size: 2rem;
-    }
-    
     .index-services-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
     
     .index-reasons-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
     
     .index-testimonials {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
     
     .index-cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .index-cta-button {
-        width: 100%;
-        max-width: 300px;
+        flex-direction: row;
     }
     
     .index-cta-features {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .index-section-header h2 {
-        font-size: 2rem;
+        flex-direction: row;
+        justify-content: center;
     }
 }
 
-@media (max-width: 480px) {
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {
+    .index-hero {
+        padding: 8rem 2rem 5rem;
+    }
+    
     .index-hero h1 {
-        font-size: 1.8rem;
+        font-size: 3.2rem;
     }
     
-    .index-service-card {
-        padding: 1.5rem;
+    .index-hero .tagline {
+        font-size: 1.3rem;
     }
     
-    .index-service-features {
-        flex-direction: column;
-        align-items: center;
+    .index-about-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+    
+    .index-about-text h3 {
+        text-align: left;
+    }
+    
+    .index-about-text p {
+        text-align: left;
+    }
+    
+    .index-learn-more-btn {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .index-services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .index-reasons-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    
+    .index-testimonials {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .index-section-header h2 {
+        font-size: 2.5rem;
+    }
+    
+    .index-section-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* Desktop besar (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .index-hero-content,
+    .index-about-content,
+    .index-services-grid,
+    .index-reasons-grid,
+    .index-testimonials,
+    .index-cta-content {
+        max-width: 1200px;
+    }
+    
+    .index-about-section,
+    .index-services-section,
+    .index-why-choose-section,
+    .index-booking-cta-section {
+        padding: 5rem 2rem;
     }
 }
