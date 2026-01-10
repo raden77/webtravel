@@ -11,6 +11,11 @@ body {
 
 /* Navigation */
 /* Navbar Styles */
+/* ====================
+   NAVBAR MOBILE FIX
+   ==================== */
+
+/* Navbar Base */
 nav {
     display: flex;
     justify-content: space-between;
@@ -21,25 +26,33 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
 }
 
+/* Logo */
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
+    z-index: 1002;
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-/* Desktop Navigation - Default */
+/* Desktop Navigation */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 1rem;
+    gap: 1.5rem;
     margin: 0;
     padding: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links li {
+    margin: 0;
 }
 
 .nav-links a {
@@ -47,12 +60,14 @@ nav {
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    transition: background 0.3s;
+    transition: all 0.3s;
+    font-weight: 500;
     display: block;
 }
 
 .nav-links a:hover {
     background: #3498db;
+    color: white;
 }
 
 .nav-links a.active {
@@ -60,76 +75,107 @@ nav {
     color: white;
 }
 
-/* Menu Toggle (Hamburger) - Hidden on Desktop */
+/* Hamburger Menu Toggle */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
     padding: 0.5rem;
+    z-index: 1002;
+    transition: all 0.3s;
 }
 
-/* MOBILE STYLES (Max-width: 768px) */
+.menu-toggle:hover {
+    color: #3498db;
+}
+
+/* ====================
+   MOBILE STYLES (Max-width: 768px)
+   ==================== */
 @media screen and (max-width: 768px) {
     nav {
         padding: 0.8rem 5%;
     }
     
-    /* Show hamburger menu on mobile */
+    /* Tampilkan hamburger */
     .menu-toggle {
         display: block;
-        z-index: 1001;
     }
     
-    /* Hide nav-links by default on mobile */
+    /* Sembunyikan menu default di mobile */
     .nav-links {
         position: fixed;
         top: 0;
-        right: -100%;
+        left: -100%;
         width: 70%;
         max-width: 300px;
         height: 100vh;
         background: #2c3e50;
         flex-direction: column;
         align-items: flex-start;
-        padding: 5rem 1.5rem 2rem;
-        transition: right 0.3s ease-in-out;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        justify-content: flex-start;
+        padding-top: 80px; /* Space untuk logo */
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         gap: 0;
-        z-index: 999;
-        margin: 0;
+        z-index: 1001;
+        box-shadow: 5px 0 15px rgba(0,0,0,0.2);
+        transition: left 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        overflow-y: auto;
     }
     
-    /* Show nav-links when active */
+    /* Tampilkan menu saat aktif */
     .nav-links.active {
-        right: 0;
+        left: 0;
     }
     
+    /* Style untuk setiap menu item */
     .nav-links li {
         width: 100%;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.8rem;
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: all 0.3s ease;
     }
     
+    .nav-links.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    /* Delay untuk animasi menu item */
+    .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
+    .nav-links.active li:nth-child(2) { transition-delay: 0.15s; }
+    .nav-links.active li:nth-child(3) { transition-delay: 0.2s; }
+    .nav-links.active li:nth-child(4) { transition-delay: 0.25s; }
+    .nav-links.active li:nth-child(5) { transition-delay: 0.3s; }
+    
+    /* Style untuk link di mobile */
     .nav-links a {
-        padding: 1rem;
+        padding: 1rem 1.2rem;
         width: 100%;
-        border-radius: 6px;
-        margin-bottom: 0.5rem;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-left: 3px solid transparent;
+        transition: all 0.3s;
     }
     
     .nav-links a:hover {
         background: #3498db;
+        border-left: 3px solid #3498db;
+        transform: translateX(5px);
     }
     
-    /* Logo adjustment for mobile */
-    .logo {
-        font-size: 1.2rem;
-        z-index: 1001;
+    .nav-links a.active {
+        background: #3498db;
+        border-left: 3px solid white;
     }
     
-    /* Overlay when menu is open */
+    /* Overlay saat menu terbuka */
     .nav-overlay {
         display: none;
         position: fixed;
@@ -137,31 +183,83 @@ nav {
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0,0.5);
-        z-index: 998;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(3px);
+        z-index: 1000;
+        animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
     }
     
     .nav-overlay.active {
         display: block;
     }
+    
+    /* Logo lebih kecil di mobile */
+    .logo {
+        font-size: 1.2rem;
+    }
 }
 
-/* VERY SMALL MOBILE (Max-width: 480px) */
+/* ====================
+   VERY SMALL MOBILE (Max-width: 480px)
+   ==================== */
 @media screen and (max-width: 480px) {
     .nav-links {
         width: 80%;
-        max-width: 250px;
-        padding: 4.5rem 1rem 1.5rem;
+        max-width: 280px;
+        padding-top: 70px;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
     .nav-links a {
-        padding: 0.8rem;
-        font-size: 0.95rem;
+        padding: 0.9rem 1rem;
+        font-size: 1rem;
     }
     
     .logo {
         font-size: 1.1rem;
     }
+    
+    .menu-toggle {
+        font-size: 1.5rem;
+    }
+}
+
+/* Emergency fix - tambahkan ini di akhir CSS */
+@media (max-width: 768px) {
+    .nav-links {
+        background: #2c3e50 !important;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .nav-links.active {
+        transform: none !important;
+        left: 0 !important;
+    }
+    
+    /* Pastikan overlay tidak menutupi menu */
+    .nav-overlay {
+        z-index: 999 !important;
+    }
+    
+    .nav-links {
+        z-index: 1000 !important;
+    }
+}
+
+/* ====================
+   PREVENT BODY SCROLL WHEN MENU OPEN
+   ==================== */
+body.menu-open {
+    overflow: hidden;
+    height: 100vh;
 }
 /* Hero Section */
 .hero {
