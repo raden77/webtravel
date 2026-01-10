@@ -86,7 +86,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 kolom di mobile */
     gap: 1rem; /* Gap lebih kecil */
-    max-width: 100%;
+    max-width: 50%;
     margin: 2rem auto 0;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.1);
