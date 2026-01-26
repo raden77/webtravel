@@ -9,7 +9,7 @@ body {
     line-height: 1.6;
 }
 
-/* Navigation */
+/* Navigation - Commented out to use Bootstrap navbar */
 /* Navbar Styles */
 /* ====================
    NAVBAR MOBILE FIX
@@ -253,6 +253,7 @@ nav {
         z-index: 1000 !important;
     }
 }
+*/
 
 /* ====================
    PREVENT BODY SCROLL WHEN MENU OPEN
